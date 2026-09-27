@@ -36,8 +36,8 @@ export default [
     title: 'Heritage Centre and Roman Gate',
     description: 'Photogrammetric models of the surface connections of Exeter\u2019s underground passages, linking the subterranean network to the modern streetscape.',
     media: [
-      { img: 'images/heritage-centre-model.png' },
-      { img: 'images/heritage-centre-interior.png' },
+      { img: 'images/heritage-centre-model.jpg' },
+      { img: 'images/heritage-centre-interior.jpg' },
     ],
     docs: '',
   },
@@ -50,8 +50,8 @@ export default [
     description: 'Drone photogrammetry of an Exmoor hillfort, producing a detailed 3D map of the site in the River Barle valley.',
     media: [
       { img: 'images/cow-castle-featured.jpg' },
-      { img: 'images/cow-castle-outputs.png' },
-      { img: 'images/cow-castle-layout.png' },
+      { img: 'images/cow-castle-outputs.jpg' },
+      { img: 'images/cow-castle-layout.jpg' },
       { img: 'images/cow-castle-landscape.jpg' },
     ],
     docs: '',
@@ -82,7 +82,7 @@ export default [
     media: [
       { img: 'images/south-coaster-drone.jpg' },
       { img: 'images/south-coaster-model.jpg' },
-      { img: 'images/south-coaster-map.png' },
+      { img: 'images/south-coaster-map.jpg' },
       { img: 'images/south-coaster-ortho.jpg' },
     ],
     docs: '',
