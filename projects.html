@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects · Luca Brunke</title>
+<meta name="description" content="Selected results from survey, fieldwork and research projects: photogrammetry, drone survey and computer vision for cultural heritage.">
+<meta name="author" content="Luca Brunke">
+<meta name="ai-generated" content="true">
+<meta name="ai-disclosure" content="Layout, visual design and some editorial phrasing assisted by Claude (Anthropic); content and decisions are the site owner's own.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/libre-caslon-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/theme.css">
+<script type="module" src="assets/vendor/model-viewer.min.js"></script>
+</head>
+<body class="projects-page">
+
+<header class="site-header wrap">
+  <a class="wordmark" href="index.html">Luca&nbsp;Brunke</a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="projects.html" aria-current="page">Projects</a>
+    <a href="research.html">Research</a>
+    <a class="btn-accent" href="contact.html">Contact →</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-head wrap">
+    <p class="kicker">Projects</p>
+    <h1 class="page-title">Selected projects</h1>
+    <p class="lede">Results from survey, fieldwork and research projects. Select an image for details.</p>
+  </section>
+
+  <section class="filters wrap" aria-label="Filter results">
+    <div class="chips" id="chips"></div>
+    <div class="result-count" id="count" aria-live="polite"></div>
+  </section>
+
+  <section class="grid-section wrap">
+    <div class="result-grid" id="grid"></div>
+    <noscript><p class="lede">The project gallery needs JavaScript.</p></noscript>
+  </section>
+</main>
+
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox-panel" role="dialog" aria-modal="true" aria-labelledby="lb-title">
+    <button class="round-btn lightbox-close" type="button" id="lb-close" aria-label="Close">×</button>
+    <div class="stage" id="lb-stage"></div>
+    <div class="thumbs" id="lb-thumbs"></div>
+    <div class="caption">
+      <div class="caption-text">
+        <div class="eyebrow" id="lb-eyebrow"></div>
+        <h2 id="lb-title"></h2>
+        <p id="lb-desc"></p>
+      </div>
+      <div class="caption-actions" id="lb-actions"></div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer wrap">
+  <div class="footer-meta">© 2026 Luca Brunke · Augsburg<a href="imprint.html#ai-notice">Design &amp; phrasing assisted by AI</a></div>
+  <div class="footer-links">
+    <div>
+      <a href="https://github.com/LucaBrunke/" target="_blank" rel="noopener">GitHub<svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+      <a href="https://www.linkedin.com/in/luca-brunke/" target="_blank" rel="noopener">LinkedIn<svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+      <a href="https://orcid.org/0000-0002-3138-7901" target="_blank" rel="noopener">ORCID<svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+    </div>
+    <div>
+      <a href="imprint.html">Imprint</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+<script type="module" src="js/projects.js"></script>
+</body>
+</html>
