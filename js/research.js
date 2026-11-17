@@ -1,23 +1,22 @@
-// Research: APA / BibTeX toggle and per-entry copy buttons.
+// Research: per-entry "Copy" buttons for publication citations.
 (function () {
   var pubs = document.querySelector('.pubs');
   if (!pubs) return;
-  var toggles = pubs.querySelectorAll('.seg button');
   var timer;
 
-  toggles.forEach(function (b) {
-    b.addEventListener('click', function () {
-      pubs.dataset.format = b.dataset.format;
-      toggles.forEach(function (t) { t.setAttribute('aria-pressed', String(t === b)); });
+  // Citation text with any labelled link replaced by its URL
+  function citationText(src) {
+    var copy = src.cloneNode(true);
+    copy.querySelectorAll('a[href]').forEach(function (a) {
+      if (a.textContent.trim() !== a.href) a.textContent = a.href;
     });
-  });
+    return copy.textContent.replace(/\s+/g, ' ').trim();
+  }
 
   pubs.querySelectorAll('.pub').forEach(function (pub) {
     var btn = pub.querySelector('.copy-btn');
     btn.addEventListener('click', function () {
-      var src = pub.querySelector(pubs.dataset.format === 'bibtex' ? '.pub-bib' : '.pub-apa');
-      var text = src.textContent.replace(/\s+\n/g, '\n').trim();
-      if (pubs.dataset.format !== 'bibtex') text = text.replace(/\s+/g, ' ');
+      var text = citationText(pub.querySelector('.pub-cite'));
       var done = function () {
         pubs.querySelectorAll('.copy-btn').forEach(function (c) { c.textContent = 'Copy'; });
         btn.textContent = 'Copied ✓';
