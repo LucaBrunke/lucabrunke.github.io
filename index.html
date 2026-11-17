@@ -22,6 +22,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/libre-caslon-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/merkur-poster.jpg" as="image">
 <link rel="stylesheet" href="css/theme.css">
 <script type="module" src="assets/vendor/model-viewer.min.js"></script>
 </head>
@@ -53,7 +54,7 @@
     <div class="model-frame">
       <model-viewer src="assets/merkur.glb" alt="3D model of a Roman relief block showing the god Mercury" camera-controls auto-rotate auto-rotate-delay="600" rotation-per-second="18deg" interaction-prompt="none" shadow-intensity="0.6" exposure="1.05" loading="eager" reveal="auto">
         <div slot="progress-bar"></div>
-        <div slot="poster" class="model-poster">loading model…</div>
+        <div slot="poster" class="model-poster"><img src="assets/merkur-poster.jpg" alt="" width="800" height="1000" fetchpriority="high"><span class="visually-hidden">Loading 3D model…</span></div>
       </model-viewer>
       <div class="model-hint" aria-hidden="true">drag to rotate</div>
 
