@@ -1,3 +1,25 @@
+// Research: sidebar menu highlights the section currently in view.
+(function () {
+  var links = document.querySelectorAll('.toc a');
+  if (!links.length || !('IntersectionObserver' in window)) return;
+  var byId = {};
+  links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+
+  function mark(id) {
+    links.forEach(function (a) { a.setAttribute('aria-current', String(a === byId[id])); });
+  }
+
+  // A section counts as current once its top passes the upper third of the viewport
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) mark(e.target.id); });
+  }, { rootMargin: '0px 0px -66% 0px' });
+  Object.keys(byId).forEach(function (id) {
+    var sec = document.getElementById(id);
+    if (sec) io.observe(sec);
+  });
+  mark('research');
+})();
+
 // Research: per-entry "Copy" buttons for publication citations.
 (function () {
   var pubs = document.querySelector('.pubs');
